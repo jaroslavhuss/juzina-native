@@ -1,15 +1,23 @@
 import { StyleSheet, Text, View, Dimensions, Image } from 'react-native'
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import Layout from '../components/Layout'
 import { Entypo } from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { WebView } from 'react-native-webview';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import { UserDispatchContext, UserContext } from '../context/GlobalContext';
 const RenalniBezpecnost = () => {
     const {navigate}:{navigate:any} = useNavigation()
     const {width,height}:{width:number, height:number} = Dimensions.get("screen");
     const [w, setWidth] = useState<number>(width);
     const [h, setHeight] = useState<number>(height)
+
+
+    const showRefWindow = useContext(UserContext);
+    const setRefWindow = useContext(UserDispatchContext);
+    
+    const text = "Zdroj:\n\nhttps://www.svl.cz/files/files/Doporucene-postupy/2020/DP-DIABETES-MELLITUS-A-KOMORBIDITY.pdf"
+
     useEffect(() => {
         const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
           setHeight(screen.height)
@@ -26,7 +34,15 @@ const RenalniBezpecnost = () => {
               setLoadComponent(false)
           }
       })
-
+ const [isLoaded, setIsLoaded] = useState<boolean>(false)
+      useFocusEffect(
+        React.useCallback(() => {
+            setRefWindow({...showRefWindow,showIcon:true,referenceText:text})
+          return () => {
+            setRefWindow({...showRefWindow,showIcon:false,referenceText:""})
+          };
+        }, [isLoaded])
+      );
       
   return (
     <Layout>
@@ -35,8 +51,11 @@ const RenalniBezpecnost = () => {
         </TouchableOpacity>
         <Text></Text>
         <Text></Text>
+        <Text style={[styles.nadpis,{width:w/2, position:"absolute", top:0, right:0, color:"#08226f", textAlign:"center", fontSize:24}]}> <Entypo style={{textAlign:"center"}} name="shield" size={23} color="#08226f" /> Renální bezpečnost</Text>
         <View style={{flexDirection:"row"}}>
-        <Text style={[styles.nadpis,{width:300}]}> <Entypo style={{textAlign:"center"}} name="shield" size={17} color="black" /> Renální bezpečnost</Text>
+      
+        
+        
         <Image source={require("../assets/popznatek.png")} style={{width:800, height:100}} resizeMode={"contain"}/>
         </View>
       

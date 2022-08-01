@@ -4,6 +4,7 @@ import Menu from './Menu'
 
 const Layout = ({children}:{children:any}) => {
     const {width,height}:{width:number, height:number} = Dimensions.get("screen");
+
     const [w, setWidth] = useState<number>(width);
     const [h, setHeight] = useState<number>(height)
 
@@ -11,6 +12,8 @@ const Layout = ({children}:{children:any}) => {
         const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
           setHeight(screen.height)
           setWidth(screen.width)
+
+      
         });
         return () => subscription?.remove();
       });

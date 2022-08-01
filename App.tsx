@@ -16,6 +16,7 @@ import Dostupnost from './screens/Dostupnost';
 import {Image} from "react-native"
 import { Asset } from 'expo-asset';
 import { useEffect } from 'react';
+import { UserProvider } from './context/GlobalContext';
 
 export default function App() {
   const Drawer = createDrawerNavigator()
@@ -62,7 +63,9 @@ require('./assets/kombinace_2.png'),
     });
   }
   return (
+    
     <NavigationContainer>
+      <UserProvider>
 <Drawer.Navigator initialRouteName='Main' screenOptions={
         {
           drawerStyle: {
@@ -87,6 +90,7 @@ require('./assets/kombinace_2.png'),
 
            </Drawer.Navigator>
            <StatusBar style="auto" hidden={true}/>
+           </UserProvider>
     </NavigationContainer>
   );
 }
