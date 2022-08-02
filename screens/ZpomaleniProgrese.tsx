@@ -41,14 +41,13 @@ const ZpomaleniProgrese = () => {
         </TouchableOpacity>
         <Text></Text>
         <Text></Text>
-        <Text style={[styles.nadpis,{width:w/2, position:"absolute", top:0, right:0, color:"#08226f", textAlign:"center", fontSize:24}]}> <MaterialIcons style={{textAlign:"center"}} name="slow-motion-video" size={23} color="#08226f" /> Zpomalení progrese na inzulin</Text>
     
         <View style={[styles.platno, {height:h-100}]}>
        <TouchableOpacity onPress={()=>{setSwitchStudy(!switchStudy)}}>
-            {!switchStudy&&<Image source={require("../assets/zpomaleni_progrese.png")} resizeMode="contain" style={{width:700, height:550}}/>}
+            {!switchStudy&&<Image source={require("../assets/zpomaleni_progrese.png")} resizeMode="contain" style={{width:w<1180?700:720, height:w<1180?750:800}}/>}
         </TouchableOpacity>
         <TouchableOpacity onPress={()=>{setSwitchStudy(!switchStudy)}}>
-            {switchStudy&&<Image source={require("../assets/zpomaleni_progrese_2.png")} resizeMode="contain" style={{width:700, height:550}}/>}
+            {switchStudy&&<Image source={require("../assets/zpomaleni_progrese_2.png")} resizeMode="contain" style={{width:w<1180?700:720, height:w<1180?750:800}}/>}
         </TouchableOpacity>
      
        </View>

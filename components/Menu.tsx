@@ -1,7 +1,7 @@
 import React,{useState, useEffect, useContext} from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ImageBackground } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Dimensions, ImageBackground, Image } from 'react-native'
 import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { AntDesign } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -138,7 +138,8 @@ const Menu = () => {
         setRefWindow({...showRefWindow,showWindow:!showRefWindow.showWindow})
         setIsMenuOpened(false)
     }}>
-        <AntDesign name="infocirlceo" size={60} color="#83276b" style={{opacity:0.8, 
+        <AntDesign name="infocirlceo" size={60} color="#83276b" style={{
+opacity:0.8, 
   color: showRefWindow.showWindow?"#09236f":"#83276b", 
   borderRadius:10,
   borderWidth: 2,
@@ -153,14 +154,16 @@ const Menu = () => {
         setIsMenuOpened(!isMenuOpened)
         setRefWindow({...showRefWindow,showWindow:false})
         }}>
-      <MaterialCommunityIcons style={{opacity:0.8, 
-  color: isMenuOpened?"#09236f":"#83276b", 
+            <Image style={{
+                width:65,
+                height:65,
+                opacity:0.8, 
+
   borderRadius:10,
   borderWidth: 2,
-  borderColor: isMenuOpened?"#83276b":"#eec21e",
+  borderColor: isMenuOpened.showWindow?"#83276b":"#eec21e",
   overflow: "hidden",
-  transform:isMenuOpened?[{rotate:"90deg"}]:[{rotate:"0deg"}]
-  }} name="violin" size={60} color="#83276b" />
+            }} source={require("../assets/menu_icon.png")}/>
     </TouchableOpacity>
     </>
   )
