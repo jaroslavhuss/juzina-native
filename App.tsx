@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useFocusEffect } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import MainPage from './screens/MainPage';
 import MainPageAltered from './screens/MainPageAltered';
@@ -13,11 +14,11 @@ import RenalniBezpecnost from './screens/RenalniBezpecnost';
 import SrovnaniAntidiabetik from './screens/SrovnaniAntidiabetik';
 import SPC from './screens/spc';
 import Dostupnost from './screens/Dostupnost';
-import {Image} from "react-native"
+import {Image, Dimensions} from "react-native"
 import { Asset } from 'expo-asset';
-import { useEffect } from 'react';
-import { UserProvider } from './context/GlobalContext';
 
+import { UserProvider } from './context/GlobalContext';
+import * as ScreenOrientation from 'expo-screen-orientation';
 export default function App() {
   const Drawer = createDrawerNavigator()
 
@@ -62,6 +63,22 @@ require('./assets/kombinace_2.png'),
       }
     });
   }
+  const {width,height}:{width:number, height:number} = Dimensions.get("screen");
+  const [w, setWidth] = useState<number>(width);
+  const [h, setHeight] = useState<number>(height)
+useEffect(()=>{
+  const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
+    setHeight(screen.height)
+    setWidth(screen.width)
+    lockIt()
+    ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
+  });
+  return () => subscription?.remove();
+},[])
+
+const lockIt = async() =>{
+  await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
+}
   return (
     
     <NavigationContainer>

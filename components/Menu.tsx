@@ -23,7 +23,7 @@ const Menu = () => {
     useEffect(() => {
         const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
           setH(screen.height)
-          setW(screen.width)
+          setW(screen.width/3)
         });
         return () => subscription?.remove();
       });

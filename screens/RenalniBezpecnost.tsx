@@ -22,6 +22,7 @@ const RenalniBezpecnost = () => {
         const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
           setHeight(screen.height)
           setWidth(screen.width)
+          console.log(w,h)
         });
         return () => subscription?.remove();
       });
@@ -60,14 +61,14 @@ const RenalniBezpecnost = () => {
         </View>
       
 
-      
+      <Image source={require("../assets/kv_table_head.png")} style={{width:w-50,height:w<1180?154:170, resizeMode:"cover", alignSelf:"center", padding:0, margin:0}} />
      {loadComponent&&<WebView
                             originWhitelist={["file://*", "http://*", "https://*"]}
                             source={pdf}
                             allowFileAccess
                             allowUniversalAccessFromFileURLs
                             allowFileAccessFromFileURLs
-                         
+                          style={{marginTop:-20}}
                         ></WebView>}
                         
                     
