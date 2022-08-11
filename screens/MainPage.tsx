@@ -32,24 +32,25 @@ const MainPage = () => {
     <View onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         
         <ImageBackground source={w<1180?require("../assets/splash.png"):require("../assets/splash_2.png")} style={{width:w, height:h}} resizeMode="cover">
+
         <TouchableOpacity style={[styles.position, {
           width:(w/2),
           marginRight:w*0.03,
-          marginTop:h*0.18
+          marginTop:h*0.21
         }]} onPress={()=>{navigate("srovnani-antidiabetik")}}>
           
         </TouchableOpacity>
         <TouchableOpacity style={[styles.position, {
           width:(w/2),
           marginRight:w*0.03,
-          marginTop:h*0.24
+          marginTop:h*0.27
         }]} onPress={()=>{navigate("bez-vahoveho-prirustku")}}>
           
         </TouchableOpacity>
         <TouchableOpacity style={[styles.position, {
           width:(w/2),
           marginRight:w*0.03,
-          marginTop:h*0.3
+          marginTop:h*0.34
         }]} onPress={()=>{navigate("kv-bezpecnost")}}>
           
         </TouchableOpacity>
@@ -67,9 +68,6 @@ const styles = StyleSheet.create({
     position:"absolute",
     top:0, 
     right:0,
-
     height:50,
-    borderColor:"white",
-
   }
 })

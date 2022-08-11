@@ -97,7 +97,7 @@ const Menu = () => {
         <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
         <Entypo style={{textAlign:"center"}} name="shield" size={30} color="black" />
             </View>
-            <Text style={styles.menuItemText}>KV bezpečnost</Text>
+            <Text style={styles.menuItemText}>Kardiovaskulární bezpečnost</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("renalni-bezpecnost")}}>
         <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
