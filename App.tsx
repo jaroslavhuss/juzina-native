@@ -13,6 +13,7 @@ import KVBezpecnost from './screens/KVBezpecnost';
 import RenalniBezpecnost from './screens/RenalniBezpecnost';
 import SrovnaniAntidiabetik from './screens/SrovnaniAntidiabetik';
 import SPC from './screens/spc';
+import Hypoglykemie from './screens/Hypoglykemie';
 import Dostupnost from './screens/Dostupnost';
 import {Image, Dimensions} from "react-native"
 import { Asset } from 'expo-asset';
@@ -104,6 +105,7 @@ const lockIt = async() =>{
               <Drawer.Screen name="srovnani-antidiabetik" component={SrovnaniAntidiabetik} />
               <Drawer.Screen name="spc" component={SPC} />
               <Drawer.Screen name="dostupnost" component={Dostupnost} />
+              <Drawer.Screen name="hypoglykemie" component={Hypoglykemie} />
 
            </Drawer.Navigator>
            <StatusBar style="auto" hidden={true}/>
