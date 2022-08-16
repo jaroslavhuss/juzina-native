@@ -37,7 +37,7 @@ const MainPage = () => {
           width:(w/2),
           marginRight:w*0.03,
           marginTop:h*0.21
-        }]} onPress={()=>{navigate("srovnani-antidiabetik")}}>
+        }]} onPress={()=>{navigate("hypoglykemie")}}>
           
         </TouchableOpacity>
         <TouchableOpacity style={[styles.position, {
@@ -54,14 +54,7 @@ const MainPage = () => {
         }]} onPress={()=>{navigate("kv-bezpecnost")}}>
           
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.position, {
-          width:(w*0.80),
-          marginRight:w*0.03,
-          marginTop:h*0.42,
-          height:h/2
-        }]} onPress={()=>{navigate("hypoglykemie")}}>
-          
-        </TouchableOpacity>
+       
     <Menu />
         </ImageBackground>
      

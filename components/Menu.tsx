@@ -90,7 +90,7 @@ const Menu = () => {
         }
         <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("hypoglykemie")}}>
         <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
-                <AntDesign style={{textAlign:"center"}} name="hearto" size={30} color="black" />
+                <MaterialCommunityIcons style={{textAlign:"center"}} name="candy" size={30} color="black" />
             </View>
             <Text style={styles.menuItemText}>Nízké riziko hypoglykémie</Text>
         </TouchableOpacity>
