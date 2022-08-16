@@ -81,17 +81,19 @@ const Menu = () => {
             </TouchableOpacity>
 
 
-            <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("zpomaleni-progrese")}}>
+            <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:6}]} onPress={()=>{navigate("zpomaleni-progrese")}}>
             <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
             <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Zpomalení progrese na inzulín</Text> 
             </TouchableOpacity>
 
-            <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("hypoglykemie")}}>
-            <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
-            <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b", marginBottom:4}]}>Nízké riziko hypoglykémie</Text> 
-            </TouchableOpacity>
             </>
         }
+        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("hypoglykemie")}}>
+        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
+                <AntDesign style={{textAlign:"center"}} name="hearto" size={30} color="black" />
+            </View>
+            <Text style={styles.menuItemText}>Nízké riziko hypoglykémie</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("bez-vahoveho-prirustku")}}>
         <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
                 <MaterialIcons style={{textAlign:"center"}} name="pregnant-woman" size={30} color="black" />
@@ -138,7 +140,22 @@ const Menu = () => {
         </TouchableOpacity>
     </View>
    }
-
+  {showRefWindow.showIcon &&
+       <TouchableOpacity style={styles.thePosition2} onPress={()=>{
+        setRefWindow({...showRefWindow,showWindow:!showRefWindow.showWindow})
+        setIsMenuOpened(false)
+    }}>
+        <AntDesign name="infocirlceo" size={60} color="#83276b" style={{
+opacity:0.8, 
+  color: showRefWindow.showWindow?"#09236f":"#83276b", 
+  borderRadius:10,
+  borderWidth: 2,
+  borderColor: showRefWindow.showWindow?"#83276b":"#eec21e",
+  overflow: "hidden",
+        }}
+        />
+    </TouchableOpacity>
+    }
  
     <TouchableOpacity style={styles.thePosition} onPress={()=>{
         setIsMenuOpened(!isMenuOpened)

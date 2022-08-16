@@ -13,7 +13,7 @@ const Hypoglykemie = () => {
     const showRefWindow = useContext(UserContext);
     const setRefWindow = useContext(UserDispatchContext);
     
-    const text = "Zdroj:\n\nGreen JB et al. Effect of Sitagliptin on Cardiovascular Outcomes in Type 2 Diabetes. N Engl J Med 2015;373:232-42. (TECOS study) Trial Evaluating Cardiovascular Outcomes with Sitagliptin (TECOS)"
+    const text = "Zdroj:\nSeck T et al. Int J Clin Pract. 2010;64:562–576"
 
     useEffect(() => {
         const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
