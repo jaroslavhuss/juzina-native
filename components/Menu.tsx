@@ -70,10 +70,17 @@ const Menu = () => {
         {
             isUcinnostOpened&&
             <>
-            <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("ctyri-procentni-body")}}>
+            {
+                /**
+                 * 
+                 * 
+                 * <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("ctyri-procentni-body")}}>
             <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>                  
                 <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Snížení o 4% body HbA1c</Text> 
             </TouchableOpacity>
+                 */
+            }
+           
 
             <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("sitagliptin")}}>
             <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
@@ -83,7 +90,7 @@ const Menu = () => {
 
             <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:6}]} onPress={()=>{navigate("zpomaleni-progrese")}}>
             <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
-            <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Zpomalení progrese na inzulín</Text> 
+            <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Oddálení léčby inzulinem</Text> 
             </TouchableOpacity>
 
             </>
