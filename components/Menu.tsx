@@ -60,59 +60,13 @@ const Menu = () => {
             </View>
             <Text style={styles.menuItemText}>Bioekvivalentní studie</Text>
         </TouchableOpacity>
-
-        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}, isUcinnostOpened?{marginBottom:3}:{marginBottom:15}]} onPress={()=>{setIsUcinnostOpened(!isUcinnostOpened)}}>
-        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
-                <AntDesign style={{textAlign:"center"}} name="barschart" size={30} color="black" />
-            </View>
-            <Text style={styles.menuItemText}>Účinnost{"                         "}<AntDesign name={isUcinnostOpened?"down":"right"} size={14} color="white" /></Text> 
-        </TouchableOpacity>
-        {
-            isUcinnostOpened&&
-            <>
-            {
-                /**
-                 * 
-                 * 
-                 * <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("ctyri-procentni-body")}}>
-            <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>                  
-                <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Snížení o 4% body HbA1c</Text> 
-            </TouchableOpacity>
-                 */
-            }
-           
-
-            <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("sitagliptin")}}>
-            <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
-               <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Kombinace sitagliptin + SU ± metformin</Text> 
-            </TouchableOpacity>
-
-
-            <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:6}]} onPress={()=>{navigate("zpomaleni-progrese")}}>
-            <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
-            <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Oddálení léčby inzulinem</Text> 
-            </TouchableOpacity>
-
-            </>
-        }
-        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("hypoglykemie")}}>
-        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
-                <MaterialCommunityIcons style={{textAlign:"center"}} name="candy" size={30} color="black" />
-            </View>
-            <Text style={styles.menuItemText}>Nízké riziko hypoglykémie</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("bez-vahoveho-prirustku")}}>
-        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
-                <MaterialIcons style={{textAlign:"center"}} name="pregnant-woman" size={30} color="black" />
-            </View>
-            <Text style={styles.menuItemText}>Bez váhového přírůstku</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("kv-bezpecnost")}}>
-        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
-        <Entypo style={{textAlign:"center"}} name="shield" size={30} color="black" />
-            </View>
-            <Text style={styles.menuItemText}>Kardiovaskulární bezpečnost</Text>
-        </TouchableOpacity>
+{
+    /**
+     * 
+     */
+}
+    
+        
         <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("renalni-bezpecnost")}}>
         <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
         <Entypo style={{textAlign:"center"}} name="shield" size={30} color="black" />
@@ -236,3 +190,62 @@ padding:10
         marginLeft:90
     }
 })
+
+
+
+
+{/* <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("hypoglykemie")}}>
+        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
+                <MaterialCommunityIcons style={{textAlign:"center"}} name="candy" size={30} color="black" />
+            </View>
+            <Text style={styles.menuItemText}>Nízké riziko hypoglykémie</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("bez-vahoveho-prirustku")}}>
+        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
+                <MaterialIcons style={{textAlign:"center"}} name="pregnant-woman" size={30} color="black" />
+            </View>
+            <Text style={styles.menuItemText}>Bez váhového přírůstku</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{navigate("kv-bezpecnost")}}>
+        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
+        <Entypo style={{textAlign:"center"}} name="shield" size={30} color="black" />
+            </View>
+            <Text style={styles.menuItemText}>Kardiovaskulární bezpečnost</Text>
+        </TouchableOpacity> */}
+
+
+
+// {/* <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}, isUcinnostOpened?{marginBottom:3}:{marginBottom:15}]} onPress={()=>{setIsUcinnostOpened(!isUcinnostOpened)}}>
+// <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
+//         <AntDesign style={{textAlign:"center"}} name="barschart" size={30} color="black" />
+//     </View>
+//     <Text style={styles.menuItemText}>Účinnost{"                         "}<AntDesign name={isUcinnostOpened?"down":"right"} size={14} color="white" /></Text> 
+// </TouchableOpacity>
+// {
+//     isUcinnostOpened&&
+//     <>
+//     {
+//         /**
+//          * 
+//          * 
+//          * <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("ctyri-procentni-body")}}>
+//     <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>                  
+//         <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Snížení o 4% body HbA1c</Text> 
+//     </TouchableOpacity>
+//          */
+//     }
+   
+
+//     <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:3}]} onPress={()=>{navigate("sitagliptin")}}>
+//     <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
+//        <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Kombinace sitagliptin + SU ± metformin</Text> 
+//     </TouchableOpacity>
+
+
+//     <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", marginBottom:6}]} onPress={()=>{navigate("zpomaleni-progrese")}}>
+//     <View style={{backgroundColor:"transparent", flex:2,padding:5}}></View>
+//     <Text style={[styles.menuItemText,{backgroundColor:"#b80b8b"}]}>Oddálení léčby inzulinem</Text> 
+//     </TouchableOpacity>
+
+//     </>
+// } */}
