@@ -96,9 +96,11 @@ const Menu = () => {
         </ImageBackground>
         <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{setIsMenuOpened(false)}}>
         <View style={{backgroundColor:"transparent", flex:1}}>
+            
         <AntDesign style={{textAlign:"center"}} name="closecircleo" size={50} color="black" />
             </View>
         </TouchableOpacity>
+        <Text>KEDP/DAET2R</Text>
     </View>
    }
   {showRefWindow.showIcon &&
