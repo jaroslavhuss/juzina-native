@@ -13,6 +13,7 @@ import KVBezpecnost from './screens/KVBezpecnost';
 import RenalniBezpecnost from './screens/RenalniBezpecnost';
 import SrovnaniAntidiabetik from './screens/SrovnaniAntidiabetik';
 import SPC from './screens/spc';
+import SrovnavaciTabulka from "./screens/tabulka"
 import Hypoglykemie from './screens/Hypoglykemie';
 import Dostupnost from './screens/Dostupnost';
 import {Image, Dimensions} from "react-native"
@@ -35,6 +36,7 @@ require('./assets/kv_pdf.pdf'),
 require('./assets/srovnani_pdf.pdf'),
 require('./assets/bg_regular.png'),
 require('./assets/juzina-spc.pdf'),
+require('./assets/prehled.pdf'),
 require('./assets/popznatek.png'),
 require('./assets/violin_bg_menu.png'),
 require('./assets/4_procena_2.png'),
@@ -104,6 +106,8 @@ const lockIt = async() =>{
               <Drawer.Screen name="renalni-bezpecnost" component={RenalniBezpecnost} />
               <Drawer.Screen name="srovnani-antidiabetik" component={SrovnaniAntidiabetik} />
               <Drawer.Screen name="spc" component={SPC} />
+              <Drawer.Screen name="tabulka" component={SrovnavaciTabulka} />
+
               <Drawer.Screen name="dostupnost" component={Dostupnost} />
               <Drawer.Screen name="hypoglykemie" component={Hypoglykemie} />
 

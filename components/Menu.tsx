@@ -98,6 +98,12 @@ const Menu = () => {
         <View style={{backgroundColor:"transparent", flex:1}}>
             
         <AntDesign style={{textAlign:"center"}} name="closecircleo" size={50} color="black" />
+        <TouchableOpacity onPress={()=>{
+                 navigate("tabulka")
+        }}>
+        <AntDesign style={{position:"absolute", bottom:0, right:0, marginRight:20}} name="pushpin" size={50} color="#83276b" />
+        </TouchableOpacity>
+        
             </View>
         </TouchableOpacity>
         <Text>KEDP/DAET2R</Text>
