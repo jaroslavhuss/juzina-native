@@ -52,7 +52,7 @@ const RenalniBezpecnost = () => {
         </TouchableOpacity>
         <Text></Text>
         <Text></Text>
-        <Text style={[styles.nadpis,{width:w/2, position:"absolute", top:0, right:0, color:"#08226f", textAlign:"center", fontSize:24}]}> <Entypo style={{textAlign:"center"}} name="shield" size={23} color="#08226f" /> Renální bezpečnost</Text>
+        <Text style={[styles.nadpis,{width:w/4, position:"absolute", top:0, right:0, color:"white", textAlign:"center", fontSize:15}]}> <Entypo style={{textAlign:"center"}} name="shield" size={15} color="white" /> Renální bezpečnost</Text>
         <View style={{flexDirection:"row"}}>
       
         
@@ -86,10 +86,9 @@ const styles = StyleSheet.create({
     },
     nadpis:{
         padding:20,
-        backgroundColor:"white",
         borderTopRightRadius:12,
         fontSize:18,
         fontWeight:"bold",
-        opacity:0.7
+
     }
 })

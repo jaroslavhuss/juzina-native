@@ -35,8 +35,8 @@ const SPC = () => {
         </TouchableOpacity>
         <Text></Text>
         <Text></Text>
-        <Text style={[styles.nadpis,{width:300}]}> <AntDesign style={{textAlign:"center"}} name="pdffile1" size={17} color="black" /> SPC</Text>
-      
+        <Text style={[styles.nadpis,{width:w/4, position:"absolute", top:0, right:0, color:"white", textAlign:"center", fontSize:15}]}> <AntDesign style={{textAlign:"center"}} name="pdffile1" size={15} color="white" /> SPC</Text>
+         
 
       {loadComponent&&
       <WebView
@@ -64,11 +64,9 @@ const styles = StyleSheet.create({
         alignItems:"center"
     },
     nadpis:{
-        padding:20,
-        backgroundColor:"white",
-        borderTopRightRadius:12,
-        fontSize:18,
-        fontWeight:"bold",
-        opacity:0.7
+      padding:20,
+      borderTopRightRadius:12,
+      fontSize:18,
+      fontWeight:"bold",
     }
 })

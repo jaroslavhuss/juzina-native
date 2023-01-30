@@ -50,7 +50,7 @@ const SrovnaniAntidiabetik = () => {
         </TouchableOpacity>
         <Text></Text>
         <Text></Text>
-        <Text style={[styles.nadpis,{width:w/2, position:"absolute", top:0, right:0, color:"#08226f", textAlign:"center", fontSize:24}]}> <AntDesign style={{textAlign:"center"}} name="swap" size={23} color="#08226f" /> Srovnání antidiabetik</Text>
+        <Text style={[styles.nadpis,{width:w/4, position:"absolute", top:0, right:0, color:"white", textAlign:"center", fontSize:15}]}> <AntDesign style={{textAlign:"center"}} name="swap" size={15} color="white" /> Srovnání antidiabetik</Text>
      
       
 
@@ -81,10 +81,8 @@ const styles = StyleSheet.create({
     },
     nadpis:{
         padding:20,
-        backgroundColor:"white",
         borderTopRightRadius:12,
         fontSize:18,
         fontWeight:"bold",
-        opacity:0.7
     }
 })

@@ -38,7 +38,7 @@ const MainPage = () => {
         <TouchableOpacity style={[styles.position, {
           width:(w/2),
           marginRight:w*0.03,
-          marginTop:h*0.21
+          marginTop:w<1180?h*0.21:h*0.24
         }]} onPress={()=>{
           setShowReference(!showReference)
           setReferenceText("Zdroj:Seck T et al. Int J Clin Pract. 2010;64:562–576")
@@ -48,7 +48,7 @@ const MainPage = () => {
         <TouchableOpacity style={[styles.position, {
           width:(w/2),
           marginRight:w*0.03,
-          marginTop:h*0.27
+          marginTop:w<1180?h*0.27:h*0.31
         }]} onPress={()=>{
 
           setShowReference(!showReference)
@@ -59,7 +59,8 @@ const MainPage = () => {
         <TouchableOpacity style={[styles.position, {
           width:(w/2),
           marginRight:w*0.03,
-          marginTop:h*0.34
+          marginTop:w<1180?h*0.34:h*0.39,
+          height:120
         }]} onPress={()=>{
           setShowReference(!showReference)
           setReferenceText("Zdroj: Green JB et al. Effect of Sitagliptin on Cardiovascular Outcomes in Type 2 Diabetes. N Engl J Med 2015;373:232-42. (TECOS study)")
@@ -100,5 +101,6 @@ const styles = StyleSheet.create({
     top:0, 
     right:0,
     height:50,
+    borderColor:"white"
   }
 })
