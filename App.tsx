@@ -13,6 +13,7 @@ import KVBezpecnost from './screens/KVBezpecnost';
 import RenalniBezpecnost from './screens/RenalniBezpecnost';
 import SrovnaniAntidiabetik from './screens/SrovnaniAntidiabetik';
 import SPC from './screens/spc';
+import SPCJuzimete from './screens/spcJuzi';
 import SrovnavaciTabulka from "./screens/tabulka"
 import Hypoglykemie from './screens/Hypoglykemie';
 import Dostupnost from './screens/Dostupnost';
@@ -21,6 +22,7 @@ import { Asset } from 'expo-asset';
 
 import { UserProvider } from './context/GlobalContext';
 import * as ScreenOrientation from 'expo-screen-orientation';
+import DostupnostTabulka from './screens/DostupnostTabulka';
 export default function App() {
   const Drawer = createDrawerNavigator()
 
@@ -106,9 +108,12 @@ const lockIt = async() =>{
               <Drawer.Screen name="renalni-bezpecnost" component={RenalniBezpecnost} />
               <Drawer.Screen name="srovnani-antidiabetik" component={SrovnaniAntidiabetik} />
               <Drawer.Screen name="spc" component={SPC} />
+              <Drawer.Screen name="spc-juzi" component={SPCJuzimete} />
               <Drawer.Screen name="tabulka" component={SrovnavaciTabulka} />
 
               <Drawer.Screen name="dostupnost" component={Dostupnost} />
+              <Drawer.Screen name="dostupnost-tabulka" component={DostupnostTabulka} />
+
               <Drawer.Screen name="hypoglykemie" component={Hypoglykemie} />
 
            </Drawer.Navigator>

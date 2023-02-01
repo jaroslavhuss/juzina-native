@@ -85,14 +85,32 @@ const Menu = () => {
             </View>
             <Text style={styles.menuItemText}>Dostupnost</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{
+
+<View style={{
+    flexDirection:"row",
+    
+}}>
+<TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center", width:"48%"}]} onPress={()=>{
             navigate("spc")
         }}>
         <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
-        <AntDesign style={{textAlign:"center"}} name="pdffile1" size={30} color="black" />
+        <AntDesign style={{textAlign:"center"}} name="pdffile1" size={23} color="black" />
             </View>
-            <Text style={styles.menuItemText}>SPC</Text>
+            <Text style={[styles.menuItemText,{fontSize:14}]}>SPC Juzina</Text>
         </TouchableOpacity>
+        <Text>{"  "}</Text>
+        <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center",width:"48%"}]} onPress={()=>{
+            navigate("spc-juzi")
+        }}>
+        <View style={{backgroundColor:"#f0c736", flex:2,padding:7}}>
+        <AntDesign style={{textAlign:"center"}} name="pdffile1" size={23} color="black" />
+            </View>
+            <Text style={[styles.menuItemText,{fontSize:14}]}>SPC Juzimette</Text>
+        </TouchableOpacity>
+</View>
+        
+
+
         </ImageBackground>
         <TouchableOpacity style={[styles.menuItemOpacity,{flexDirection:"row", alignItems:"center"}]} onPress={()=>{setIsMenuOpened(false)}}>
         <View style={{backgroundColor:"transparent", flex:1}}>
@@ -161,6 +179,7 @@ const styles = StyleSheet.create({
         backgroundColor:"#83276b"
     },
     rightMenu:{
+        zIndex:100,
         backgroundColor:"white",
         position:"absolute",
         right:0,
@@ -183,7 +202,7 @@ padding:10
         bottom:0,
         left:0,
         marginBottom:130,
-        zIndex:200,
+        zIndex:2000,
         marginLeft:20,
         backgroundColor:"#ffffff94",
      

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View, ImageBackground, TouchableOpacity, Dimensions } from 'react-native'
 import { useSwipe } from '../utils/useSwipe';
 import Menu from "../components/Menu"
+import { AntDesign } from '@expo/vector-icons';
 const MainPage = () => {
   
     const { onTouchStart, onTouchEnd } = useSwipe(onSwipeLeft, onSwipeRight, 6)
@@ -41,7 +42,7 @@ const MainPage = () => {
           marginTop:w<1180?h*0.21:h*0.24
         }]} onPress={()=>{
           setShowReference(!showReference)
-          setReferenceText("Zdroj:Seck T et al. Int J Clin Pract. 2010;64:562–576")
+          setReferenceText("Zdroj: Doporučené diagnostické a terapeutické postupy pro VPL Diabetes mellitus a komorbidity 2021.")
         }}>
           
         </TouchableOpacity>
@@ -52,7 +53,7 @@ const MainPage = () => {
         }]} onPress={()=>{
 
           setShowReference(!showReference)
-          setReferenceText("Zdroj: Arechavaleta R et al. Efficacy and safety of treatment with sitagliptin or glimepiride in patients with type 2 diabetes inadequately controlled on metformin monotherapy: a randomized, double-blind, non-inferiority trial. Diabetes, Obesity and Metabolism 13: 160–168, 2011.")
+          setReferenceText("Zdroj: Doporučené diagnostické a terapeutické postupy pro VPL Diabetes mellitus a komorbidity 2021.")
         }}>
           
         </TouchableOpacity>
@@ -63,7 +64,7 @@ const MainPage = () => {
           height:120
         }]} onPress={()=>{
           setShowReference(!showReference)
-          setReferenceText("Zdroj: Green JB et al. Effect of Sitagliptin on Cardiovascular Outcomes in Type 2 Diabetes. N Engl J Med 2015;373:232-42. (TECOS study)")
+          setReferenceText("Zdroj: SPC Juzina")
       
         }}>
           
@@ -88,7 +89,21 @@ const MainPage = () => {
        
     <Menu />
         </ImageBackground>
+        <View style={{position:"absolute", bottom:h/2-50, left:0, zIndex:1}}>
+<TouchableOpacity  
+       onPress={
+          ()=>{
+            console.log("press")
+            navigate("hlavni-stranka-sekundarni")
+          }
+       }
+       >
+     <Text>
+      <AntDesign name="caretright" size={100} color="grey" />
+      </Text>
      
+     </TouchableOpacity>
+</View>
     </View>
   )
 }
