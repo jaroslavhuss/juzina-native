@@ -45,7 +45,6 @@ const SPC = () => {
       allowFileAccess
       allowUniversalAccessFromFileURLs
       allowFileAccessFromFileURLs
-   
   ></WebView>
       }
      
