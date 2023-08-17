@@ -35,7 +35,7 @@ const [showFullSizedImage, setShowFullSizedImage] = useState<boolean>(false)
 <TouchableOpacity onPress={()=>{
   setShowFullSizedImage(!showFullSizedImage)
 }}>
-        <Image source={require("../assets/dostupnost.png")} resizeMode="contain" style={{width:w, height:h}}/>
+        <Image source={require("../assets/new_table.png")} resizeMode="contain" style={{width:w, height:h}}/>
      </TouchableOpacity>
      </View>
 }
@@ -55,7 +55,7 @@ const [showFullSizedImage, setShowFullSizedImage] = useState<boolean>(false)
 <TouchableOpacity onPress={()=>{
   setShowFullSizedImage(!showFullSizedImage)
 }}>
-        <Image source={require("../assets/dostupnost.png")} resizeMode="contain" style={{width:w<1180?760:780, height:w<1180?750:800}}/>
+        <Image source={require("../assets/new_table.png")} resizeMode="contain" style={{width:w<1180?760:780, height:w<1180?750:800}}/>
      </TouchableOpacity>
 
 }
@@ -66,20 +66,7 @@ const [showFullSizedImage, setShowFullSizedImage] = useState<boolean>(false)
     </View>
    
  </Layout>
-<View style={{position:"absolute", bottom:h/2-50, left:0, zIndex:0}}>
-<TouchableOpacity  
-       onPress={
-          ()=>{
-            navigate("dostupnost-tabulka")
-          }
-       }
-       >
-     <Text>
-      <AntDesign name="caretright" size={100} color="grey" />
-      </Text>
-     
-     </TouchableOpacity>
-</View>
+
  
     </>
  
