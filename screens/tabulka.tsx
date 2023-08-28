@@ -19,7 +19,7 @@ const SPC = () => {
       });
 
       const [loadComponent, setLoadComponent] = useState<boolean>(true)
-      let pdf = require("../assets/prehled.pdf");
+      let pdf = require("../assets/prehled_final.pdf");
       useFocusEffect(() => {
           setLoadComponent(true)
           return () => {
