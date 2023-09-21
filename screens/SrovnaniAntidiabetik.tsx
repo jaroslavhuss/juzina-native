@@ -18,6 +18,7 @@ const SrovnaniAntidiabetik = () => {
     const text = "Zdroj:\n\ntabulka upravena dle https://www.svl.cz/files/files/Doporucene-postupy/2020/DP-DIABETES-MELLITUS-A-KOMORBIDITY.pdf"
 
     useEffect(() => {
+      
         const subscription = Dimensions.addEventListener('change', ({ window, screen }) => {
           setHeight(screen.height)
           setWidth(screen.width)
@@ -26,7 +27,7 @@ const SrovnaniAntidiabetik = () => {
       });
 
       const [loadComponent, setLoadComponent] = useState<boolean>(true)
-      let pdf = require("../assets/srovn-min.pdf");
+      let pdf = require("../assets/srovnani_pdf.pdf");
       useFocusEffect(() => {
           setLoadComponent(true)
           return () => {
@@ -67,7 +68,20 @@ const SrovnaniAntidiabetik = () => {
      
                         
                     
-    
+     <View style={{position:"absolute", bottom:h/2-50, right:0, zIndex:1}}>
+<TouchableOpacity  
+       onPress={
+          ()=>{
+            navigate("srovnani-antidiabetik-1")
+          }
+       }
+       >
+     <Text>
+      <AntDesign name="caretright" size={100} color="grey" />
+      </Text>
+     
+     </TouchableOpacity>
+</View>
     </Layout>
   )
 }

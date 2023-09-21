@@ -12,6 +12,8 @@ import SnizeniVahy from './screens/SnizeniVahy';
 import KVBezpecnost from './screens/KVBezpecnost';
 import RenalniBezpecnost from './screens/RenalniBezpecnost';
 import SrovnaniAntidiabetik from './screens/SrovnaniAntidiabetik';
+import SrovnaniAntidiabetik1 from './screens/SrovnaniAntidiabetik1';
+import SrovnaniAntidiabetik2 from './screens/SrovnaniAntidiabetik2';
 import SPC from './screens/spc';
 import SPCJuzimete from './screens/spcJuzi';
 import SrovnavaciTabulka from "./screens/tabulka"
@@ -35,10 +37,12 @@ require('./assets/splash_altered.png'),
 require('./assets/bg_altered.png'),
 require('./assets/icon.png'),
 require('./assets/kv_pdf.pdf'),
-require('./assets/srovnani_pdf.pdf'),
+require('./assets/srovn-min.pdf'),
 require('./assets/bg_regular.png'),
 require('./assets/juzina-spc.pdf'),
 require('./assets/prehled.pdf'),
+require('./assets/sit1.pdf'),
+require('./assets/sit2.pdf'),
 require('./assets/popznatek.png'),
 require('./assets/violin_bg_menu.png'),
 require('./assets/4_procena_2.png'),
@@ -107,6 +111,9 @@ const lockIt = async() =>{
               <Drawer.Screen name="kv-bezpecnost" component={KVBezpecnost} />
               <Drawer.Screen name="renalni-bezpecnost" component={RenalniBezpecnost} />
               <Drawer.Screen name="srovnani-antidiabetik" component={SrovnaniAntidiabetik} />
+              <Drawer.Screen name="srovnani-antidiabetik-1" component={SrovnaniAntidiabetik1} />
+              <Drawer.Screen name="srovnani-antidiabetik-2" component={SrovnaniAntidiabetik2} />
+
               <Drawer.Screen name="spc" component={SPC} />
               <Drawer.Screen name="spc-juzi" component={SPCJuzimete} />
               <Drawer.Screen name="tabulka" component={SrovnavaciTabulka} />
