@@ -26,7 +26,7 @@ const SrovnaniAntidiabetik = () => {
       });
 
       const [loadComponent, setLoadComponent] = useState<boolean>(true)
-      let pdf = require("../assets/srovnani_pdf.pdf");
+      let pdf = require("../assets/srovn-min.pdf");
       useFocusEffect(() => {
           setLoadComponent(true)
           return () => {
